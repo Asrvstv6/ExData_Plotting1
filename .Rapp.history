@@ -1,0 +1,294 @@
+class(Data2)
+head(Data2)
+Data3 <- select(Data2, (Global_active_power):Date_Time)
+dime(Data3)
+dim(Data3)
+TF <- Date_Time > 2007-02-01 00:00:00 & Date_Time < 2007-02-02 23:59:59
+TF <- (Date_Time > 2007-02-01 00:00:00 & Date_Time < 2007-02-02 23:59:59)
+TF <- (Date_Time > "2007-02-01 00:00:00" & Date_Time < "2007-02-02 23:59:59")
+TF <- (Data3$Date_Time > "2007-02-01 00:00:00" & Data3$Date_Time < "2007-02-02 23:59:59")
+head(TF)
+length(which(TF==FALSE))
+length(which(TF==TRUE))
+Data4 <- filter(Data3, (Data3$Date_Time > "2007-02-01 00:00:00" & Data3$Date_Time < "2007-02-02 23:59:59"))
+dim(Data4)
+hist(Global_active_power)
+hist(Data4$Global_active_power)
+hist(as.numeric(as.character(Data4$Global_active_power)))
+Data4
+Data2 <- mutate(data, Date_Time = DT2 )
+Data2 <- mutate(data, Date_N = Date2, Time_N = Time2)
+head(Data2)
+Data5 <- filter(Data2, Data2$Date>"2007-02-01" & Data2$Date<"2007-02-02")
+Data5 <- filter(Data2, Data2$Date_N>"2007-02-01" & Data2$Date_N<"2007-02-02")
+dim(Data5)
+dim(Data4)
+hist(as.numeric(as.character(Data5$Global_active_power)))
+Data5 <- filter(Data2, Data2$Date_N>="2007-02-01" & Data2$Date_N<="2007-02-02")
+hist(as.numeric(as.character(Data5$Global_active_power)))
+size(Data5)
+dim(Data5)
+Data4 <- filter(Data3, (Data3$Date_Time >="2007-02-01 00:00:00" & Data3$Date_Time <= "2007-02-02 23:59:59"))
+dim(Data5)
+dim(Data4)
+hist(as.numeric(as.character(Data4$Global_active_power)))
+dataFile <- "household_power_consumption.txt"#
+data_c <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")#
+subSetData <- data[data_c$Date %in% c("1/2/2007","2/2/2007") ,]
+dim(subSetData)
+data <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
+data <- read.csv2("household_power_consumption.txt", header=TRUE,sep=";",dec=".")
+data2 <- mutate(data, Date_N = as.character(Date))
+data3 <- filter(data2, data2$Date == "01/02/2007" | data2$Date=="02/02/2007")
+hist(data3$Global_reactive_power)
+hist(as.character(data3$Global_active_power))
+hist(as.numeric(as.character(data3$Global_active_power)))
+hist(as.numeric(as.character(data3$Global_active_power)))
+str(data3$Global_active_power)
+global_active_power <- subset(data3$Global_active_power !="?")
+data4 <- subset(data3, data3$Global_active_power !="?")
+hist(as.numeric(as.character(data4$Global_active_power)))
+(as.numeric(as.character(data4$Global_active_power)))
+(as.character(data4$Global_active_power))
+(data4$Global_active_power)
+data4 <- subset(data3, data3$Global_active_power !=?)
+data4 <- subset(data3, data3$Global_active_power!=?)
+data4 <- subset(data3, as.character(data3$Global_active_power)!="?")
+dim(data4)
+(data4$Global_active_power)
+data <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
+dim(data)
+names(data)
+head(data$Date)
+length(which(data$Date == "01/02/2007" | data$Date == "02/02/2007"))
+class(data$Date)
+nrows(data$Date)
+nrow(data$Date)
+dim(data$Date)
+length(data$Date)
+g <- data[(data$Date == "01/02/2007" | data$Date == "02/02/2007"),]
+dim(g)
+g <- data[(data$Date == "01/02/2007" | data$Date == 02/02/2007),]
+dim(g)
+g <- data[(data$Date == 01/02/2007 | data$Date == 02/02/2007),]
+dim(g)
+g <- dmy(data$Date)
+dim(g)
+dim(data)
+head(data)
+class(data)
+class(data$Time)
+class(data$Date)
+class(data$Global_active_power)
+date1 = "12/05/2015"
+class(date1)
+date1 == "12/05/2015"
+date1 = c("12/05/2015", "12/06/2015", "13/05/2015")
+date1 == "12/05/2015"
+g <- data$Date == "16/12/2006"
+dim(g)
+g <- (data$Date == "16/12/2006")
+class(data$Date)
+g <- data[data$Date %in% c("1/2/2007","2/2/2007") ,
+]
+dim(g)
+g <- data[(data$Date == "16/12/2006"),]
+dim(g)
+g <- data[(data$Date == "16/02/2006"),]
+dim(g)
+g <- data[(data$Date == "02/02/2006"),]
+dim(g)
+g <- data[(data$Date == "02/02/2007"),]
+dim(g)
+g <- data[(data$Date == "2/2/2007"),]
+dim(g)
+Date1
+dim(Date1)
+date1
+date1
+class(date1)
+dmy(date1)
+date1 = c(date1, "1/2/2007")
+dmy(date1)
+class(data$Date)
+g <- dmy(data$Date)
+class(g)
+head(g)
+data$Date <- dmy(data$Date)
+class(data$Date)
+g <- data[(data$Date == "2007-02-01" | data$Date == "2007-02-01"), ]
+dim(g)
+g <- data[(data$Date == "2007-02-01 UTC" | data$Date == "2007-02-01 UTC"), ]
+dim(g)
+g <- data[(data$Date == 2007-02-01 UTC | data$Date == 2007-02-01 UTC), ]
+f <- dmy(date1)
+class(f)
+f == 2015-05-12 UTC
+f == "2015-05-12 UTC"
+f
+c1 = as.POSIXct("2007-02-02")
+c1
+c1 = as.POSIXct("2007-02-02", tz=UTC)
+c1 = as.POSIXct("2007-02-02", tz="UTC")
+c1
+c1 = as.POSIXct("2007-02-02", tz="UTC")
+g <- data[(data$Date == c1), ]
+dim(g)
+dataFile
+dataFile = "household_power_consumption.txt"#
+data <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")#
+date1 = as.POSIXct("2007-02-01", tz="UTC")#
+date2 = as.POSIXct("2007-02-02", tz="UTC")#
+#
+plot1 <- data[(data$Date == date1) | (data$Date == Date2),]#
+hist(plot1$Global_active_power)
+date1 = as.POSIXct("2007-02-01", tz="UTC")#
+date2 = as.POSIXct("2007-02-02", tz="UTC")#
+#
+plot1 <- data[(data$Date == date1) | (data$Date == date2),]#
+hist(plot1$Global_active_power)
+dim(plot1)
+date1
+dataFile = "household_power_consumption.txt"#
+data <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")#
+data$Date <- ymd(data$Date)
+data <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
+data$Date <- dmy(data$Date)
+data$Date <- ymd(data$Date)
+plot1 <- data[(data$Date == date1) | (data$Date == date2),]
+hist(as.numeric(data$Global_active_power))
+hist(as.numeric(plot1$Global_active_power))
+?hist
+hist(as.numeric(plot1$Global_active_power), xlab= "Global Active Power (kilowatts)", ylab = "Frequency", main = "Global Active Power")
+?hist
+hist(as.numeric(plot1$Global_active_power), xlab= "Global Active Power (kilowatts)", ylab = "Frequency", main = "Global Active Power", col="red")
+png(filename = "Plot1.png", width = 480, height = 480)
+hist(as.numeric(plot1$Global_active_power), xlab= "Global Active Power (kilowatts)", ylab = "Frequency", main = "Global Active Power", col="red")
+dev.off()
+dim(plot1)
+Final_Data <- plot1
+date1
+weekdays(date1)
+class(date2)
+class(date1)
+Final_Data <- plot1
+Final_Data <- mutate(Final_Data, WeekDay = weekdays(Final_Data$Date))
+names(Final_Data)
+head(Final_Data)
+plot(as.numeric(Final_Data$Global_active_power), Final_Data$WeekDay)
+str(Final_Data$Global_active_power)
+str(Final_Data$WeekDay)
+summary(Final_Data$Global_active_power)
+summary(Final_Data$WeekDay)
+length(which(Final_Data$Global_active_power =="?"))
+plot(Final_Data$WeekDay, as.numeric(Final_Data$Global_active_power))
+?plot
+data(airquality)
+class(airquality$Wind)
+class(airquality$Ozone)
+class(, Final_Data$WeekDay)
+class(Final_Data$WeekDay)
+head(Final_Data$Time)
+Final_Data$Time
+F <- hms(Final_Data$Time)
+class(F)
+head(F)
+F <- strptime(Final_Data$Time, tz="UTC")
+F <- strptime(Final_Data$Time, format="%H:%M:%S" tz="UTC")
+F <- strptime(Final_Data$Time, format="%H:%M:%S",  tz="UTC")
+class(F)
+head(F)
+Final_Data <- mutate(Final_Data, Week_Time = paste(Week, Time, sep =" ")
+)
+Final_Data <- mutate(Final_Data, Week_Time = paste(WeekDay, Time, sep =" "))
+names(Final_Data)
+head(Final_Data$Week_Time)
+F <- strptime(Final_Data$Time, format="%a %H:%M:%S",  tz="UTC")
+head(F)
+F <- strptime(Final_Data$Week_Time, format="%a %H:%M:%S",  tz="UTC")
+head(F)
+Final_Data$Week_Time <- paste(Final_Data$Date, Final_Data$Time, sep=" ")
+head(Final_Data$Week_Time)
+class(Final_Data$Week_Time)
+F <- ymd_hms(Final_Data$Week_Time)
+class(F)
+head(F)
+Final_Data$Week_Time <- ymd_hms(Final_Data$Week_Time)
+names(Final_Data)
+plot(Final_Data$Week_Time, Final_Data$Global_active_power )
+?lines
+lines(Final_Data$Week_Time, Final_Data$Global_active_power )
+?plot
+plot(Final_Data$Week_Time, Final_Data$Global_active_power, type="l", ylab = "Global Active Power (kilowatts)")
+plot(Final_Data$Week_Time, Final_Data$Global_active_power, type="l", ylab = "Global Active Power (kilowatts)", xlab=NULL)
+plot(Final_Data$Week_Time, Final_Data$Global_active_power, type="l", ylab = "Global Active Power (kilowatts)", xlab=" ")
+names(Final_Data)
+class(Final_Data$Sub_metering_1)
+plot(Final_Data$Week_Time, Final_Data$Sub_metering_1, type="l" )
+lines(Final_Data$Week_Time, Final_Data$sub_metering_2)
+lines(Final_Data$Week_Time, Final_Data$sub_metering_3)
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_3)
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_3, col="blue")
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_2, col="red")
+class(Final_Data$Week_Time)
+par(mfrow = c(2,2))
+plot(Final_Data$Week_Time, Final_Data$Global_active_power, type="l", xlab = "Global Active Power")
+plot(Final_Data$Week_Time, Final_Data$Global_active_power, type="l", xlab = "Global Active Power")
+par(mfrow = c(2,2))
+par(mfrow = c(2,2))
+plot(Final_Data$Week_Time, Final_Data$Global_active_power, type="l", ylab = "Global Active Power", xlab=" ")
+plot(Final_Data$Week_Time, Final_Data$Voltage, type="l", ylab = "Voltage", xlab="datetime")
+plot(Final_Data$Week_Time, Final_Data$Sub_metering_1,ylab="Energy Sub-Metering", type="l", xlab=" ")
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_2, col="red")#
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_3, col="blue")
+legend(c)
+legend(c("Sub-1","Sub-2","Sub-3", col = c("black","red","blue")))
+legend('topright', c("Sub-1","Sub-2","Sub-3", col = c("black","red","blue")))
+legend('topright', c("Sub-1","Sub-2","Sub-3", col = c('black','red','blue')))
+legend('topright', col = c('black','red','blue')))
+legend('topright', col = c('black','red','blue'))
+legend('topright', legend = c("1","2","3"), col = c('black','red','blue'))
+plot(Final_Data$Week_Time, Final_Data$Sub_metering_1, type="l" )#
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_2, col="red")#
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_3, col="blue")
+legend('topright', legend = c("1","2","3"), col = c("black","red","blue"))
+legend('topright', legend = c("1","2","3"), col = c("black","red","blue"),lty=1:2)
+legend('topright', legend = c("1","2","3"), col = c("black","red","blue"),lty=1:1)
+legend('topright', legend = c("1","2","3"), col = c("black","red","blue"),lty=1)
+legend('topright', legend = c("1","2","3"), col = c("black","red","blue"),lty=1,box.lty=0)
+plot(Final_Data$Week_Time, Final_Data$Sub_metering_1, type="l" )#
+> lines(Final_Data$Week_Time, Final_Data$Sub_metering_2, col="red")#
+> lines(Final_Data$Week_Time, Final_Data$Sub_metering_3, col="blue")
+plot(Final_Data$Week_Time, Final_Data$Sub_metering_1, type="l" )#
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_2, col="red")#
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_3, col="blue")
+legend('topright', legend = c("1","2","3"), col = c("black","red","blue"),lty=1,box.lty=0)
+legend('topright', legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black","red","blue"),lty=1,box.lty=0)
+legend('topright', legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black","red","blue"),lty=1,box.lty=0, ylab ="Energy_Sub_metering", xlab = " ")
+plot(Final_Data$Week_Time, Final_Data$Sub_metering_1, type="l", xlab = " ", ylab = "Energy sub metering")#
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_2, col="red")#
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_3, col="blue")#
+legend('topright', legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black","red","blue"),lty=1,box.lty=0)
+plot(Final_Data$Week_Time, Final_Data$Global_reactive_power, xlab="datetime", ylab="Global_reactive_power", type="l")
+par(mfrow = c(2,2))#
+plot(Final_Data$Week_Time, Final_Data$Global_active_power, type="l", ylab = "Global Active Power", xlab=" ")#
+plot(Final_Data$Week_Time, Final_Data$Voltage, type="l", ylab = "Voltage", xlab="datetime")#
+#
+plot(Final_Data$Week_Time, Final_Data$Sub_metering_1, type="l", xlab = " ", ylab = "Energy sub metering")#
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_2, col="red")#
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_3, col="blue")#
+legend('topright', legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black","red","blue"),lty=1,box.lty=0)#
+#
+plot(Final_Data$Week_Time, Final_Data$Global_reactive_power, xlab="datetime", ylab="Global_reactive_power", type="l")
+png(filename = "Plot4.png", width = 480, height = 480)#
+par(mfrow = c(2,2))#
+plot(Final_Data$Week_Time, Final_Data$Global_active_power, type="l", ylab = "Global Active Power", xlab=" ")#
+plot(Final_Data$Week_Time, Final_Data$Voltage, type="l", ylab = "Voltage", xlab="datetime")#
+#
+plot(Final_Data$Week_Time, Final_Data$Sub_metering_1, type="l", xlab = " ", ylab = "Energy sub metering")#
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_2, col="red")#
+lines(Final_Data$Week_Time, Final_Data$Sub_metering_3, col="blue")#
+legend('topright', legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black","red","blue"),lty=1,box.lty=0)#
+#
+plot(Final_Data$Week_Time, Final_Data$Global_reactive_power, xlab="datetime", ylab="Global_reactive_power", type="l")#
+dev.off()
